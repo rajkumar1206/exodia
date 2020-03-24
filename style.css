@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.img-start{
+    background-image: url('./sky-space.jpg');
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.block{
+    display: inline;
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 50vh;
+    left: 8%;
+}
+
+.heading{
+    font-size: 95px;
+    font-weight: 400;
+    font-family: 'Patua One';
+    letter-spacing: 5px;
+    color: white;
+}
+
+.sub-heading{
+    color: white;
+    margin-left: 10px;
+    font-size: large;
+    margin-top: 15px;
+}
+
+.time{
+    text-align: center;
+    width: 30%;
+    /* display: inline; */
+    position: absolute;
+    transform: translate(0%, -50%);
+    top: 50vh;
+    left: 65%;
+    color: white;
+}
+
+.time h1{
+    font-family: 'Sofia';
+    font-weight: 50;
+}
+
+.time-flex{
+    background-color: rgba(200, 200, 200, 0.3);
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    transform: rotate(-3deg);
+}
+
+.time-box{
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(99, 16, 148, 0.8);
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.time-box p{
+    font-size: 20px;
+    font-family: 'Sofia';
+    color: white;
+}
+
+.navbar{
+    width: 100%;
+    background-color: #006dcf;
+}
+
+.navbar h1{
+    font-size: 30px;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.nav-head{
+    color: white;
+    float: left;
+}
+
+.nav-list{
+    list-style-type: none;
+}
+
+.nav-list li{
+    text-decoration: none;
+    float: right;
+    padding: 20px;
+}
+
+.nav-list li a{
+    font-size: 20px;
+    padding: 20px;
+    text-decoration: none;
+    color: wheat;
+}
+
+.nav-list li a:hover{
+    background-color: #009dff;
+}
+
+.nav-list::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.container{
+    width: 70%;
+    margin: auto;
+}
+
+.container h1{
+    margin: 20px 0 20px 0;
+    text-align: center;
+    font-family: 'Montserrat';
+    color: purple;
+}
+
+.images{
+    padding: 20px;
+    float: left;
+    width: 30%;
+}
+
+.events img, .contact img{
+    float: right;
+}
+
+.innerblock h2{
+    padding-top: 20px;
+    color: rgb(24, 172, 221);
+    font-family: 'Roboto Slab';
+}
+
+.innerblock p{
+    margin-top: 10px;
+    font-family: 'Lato';
+    line-height: 1.5em;
+    text-align: justify;
+    opacity: 0;
+    transition: 1.3s ease-in;
+}
+
+.innerblock .visible{
+    opacity: 1;
+}
+
+.innerblock::after{
+    content: "";
+    clear: both;
+    display: block;
+    margin-bottom: 40px;
+}
+
+@media( max-width: 1000px){
+    .container{
+        width: 80%;
+    }
+
+    .images{
+        width: 40%;
+    }
+}
+
+@media( max-width: 700px){
+    .heading{
+        font-size: 75px;
+    }
+    .img-start{
+        height: 60vh;
+        background-attachment: initial;
+    }
+    .block{
+        transform: translate(0, -50%);
+        top: 30vh;
+        left: 5%;
+    }
+    .container{
+        width: 90%;
+    }
+    
+    .nav-head{
+        float: none;
+        text-align: center;
+    }
+    .nav-head::after{
+        content: url('./icons8-menu.svg');
+        width: 50px;
+        height: 50px;
+        float: right;
+        overflow: hidden;
+    }
+    .nav-list{
+        text-align: center;
+        padding: 0;
+        height: 0;
+        display: block;
+        overflow: hidden;
+    }
+    .nav-list li{
+        float: none;
+        display: block;
+        height: 60px;
+        padding: 0;
+    }
+
+    .nav-list li a{
+        display: block;
+    }
+
+    .unmagic{
+        height: 0;
+        animation-name: untoggle;
+        animation-duration: 0.3s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+    }
+    .magic{
+        height: fit-content;
+        animation-name: toggle;
+        animation-duration: 0.3s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+    }
+
+    @keyframes untoggle {
+        100%{
+            height: 0;
+        }
+        75%{
+            height: 60px;
+        }
+        50%{
+            height: 120px;
+        }
+        25%{
+            height: 180px;
+        }
+        0%{
+            height: 240px;
+        }
+    }
+    @keyframes toggle {
+        0%{
+            height: 0;
+        }
+        25%{
+            height: 60px;
+        }
+        50%{
+            height: 120px;
+        }
+        75%{
+            height: 180px;
+        }
+        100%{
+            height: 240px;
+        }
+    }
+
+    .time{
+        display: none;
+    }
+
+    .images{
+        padding: 0;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .innerblock h2{
+        text-align: center;
+    }
+}
