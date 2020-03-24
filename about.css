@@ -70,7 +70,7 @@ img{
 }
 @media(max-width: 700px){
     main{
-        width: 95%;
+        width: 90%;
     }
     img{
         float: none;
