@@ -58,6 +58,7 @@ img{
 @media(max-width: 700px){
     img{
         width: 100vw;
+        margin: 0;
     }
 }
 /* @media(max-width: 500px){
