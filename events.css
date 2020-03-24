@@ -43,7 +43,7 @@ p{
 img{
     width: 100%;
     background-position: center;
-    height: 120vh;
+/*     height: 120vh; */
 }
 
 @media(max-width: 900px){
