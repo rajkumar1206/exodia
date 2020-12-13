@@ -22,7 +22,7 @@ navToggle.addEventListener('click', (e) =>{
 
 const timeList = document.querySelectorAll('.time-box');
 const heeadingTime = document.querySelector('#time')
-const time = new Date(2021, 03, 22, 0, 0, 0);
+const time = new Date(2021, 08, 22, 0, 0, 0);
 
 const timeHandler = () => {
     let d = new Date();
